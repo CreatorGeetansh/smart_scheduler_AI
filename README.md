@@ -23,26 +23,29 @@ This project is a sophisticated, voice-enabled AI agent built for the NextDimens
 The agent's architecture is designed to separate its "brain" from its "hands," allowing for a modular and robust system.
 
 ```mermaid
-graph TD
-    subgraph User Interface (Streamlit)
-        A[User Input: Voice/Text] --> B{app.py Orchestrator};
-        F[Agent Response: Text/Speech] --> G((End Turn));
+flowchart TD
+    %% User Interface Layer
+    subgraph UI["User Interface (Streamlit)"]
+        A["User Input: Voice/Text"] --> B["app.py Orchestrator"]
+        F["Agent Response: Text/Speech"] --> G["End Turn"]
     end
 
-    subgraph Agent Core
-        B --> C{Reasoning Engine: Gemini 1.5 Pro};
-        C -- Wants to Talk --> E[Generate Text Response];
-        C -- Wants to Act --> D[Generate Tool Call];
-        D --> H{Tool Executor};
-        I[Tool Result] --> C;
-        E --> F;
+    %% Agent Core Layer
+    subgraph CORE["Agent Core"]
+        B --> C{"Reasoning Engine:\nGemini 1.5 Pro"}
+        C -- "Wants to Talk" --> E["Generate Text Response"]
+        C -- "Wants to Act" --> D["Generate Tool Call"]
+        D --> H{"Tool Executor"}
+        I["Tool Result"] --> C
+        E --> F
     end
 
-    subgraph Tools (calendar_tools.py)
-        H -- check_availability() --> J{{Google Calendar API}};
-        H -- create_calendar_event() --> J;
-        H -- get_day_schedule() --> J;
-        H -- find_calendar_event() --> J;
-        H -- delete_calendar_event() --> J;
-        J --> I;
+    %% Tools Layer
+    subgraph TOOLS["Tools (calendar_tools.py)"]
+        H -- "check_availability()" --> J{{"Google Calendar API"}}
+        H -- "create_calendar_event()" --> J
+        H -- "get_day_schedule()" --> J
+        H -- "find_calendar_event()" --> J
+        H -- "delete_calendar_event()" --> J
+        J --> I
     end
