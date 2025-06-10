@@ -1,0 +1,841 @@
+2025-06-09 11:35:56,471 - [ERROR] - app.py:188 - An error occurred: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 152, in process_and_respond
+    response = st.session_state.chat_session.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-06-09 11:38:13,090 - [ERROR] - app.py:188 - An error occurred: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 152, in process_and_respond
+    response = st.session_state.chat_session.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+2025-06-09 11:38:50,194 - [ERROR] - app.py:188 - An error occurred: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 10
+}
+]
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 152, in process_and_respond
+    response = st.session_state.chat_session.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 10
+}
+]
+2025-06-09 11:38:51,477 - [ERROR] - app.py:188 - An error occurred: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 152, in process_and_respond
+    response = st.session_state.chat_session.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-06-09 11:43:08,034 - [ERROR] - app.py:188 - An error occurred: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 52
+}
+]
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 152, in process_and_respond
+    response = st.session_state.chat_session.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 52
+}
+]
+2025-06-09 11:48:51,288 - [ERROR] - app.py:188 - An error occurred: Could not convert `part.function_call` to text.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 182, in process_and_respond
+    final_response = response.text
+                     ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\generation_types.py", line 536, in text
+    raise ValueError(f"Could not convert `part.{part_type}` to text.")
+ValueError: Could not convert `part.function_call` to text.
+2025-06-09 11:54:12,164 - [INFO] - calendar_tools.py:42 - Tool 'check_availability' called with args: start=2025-06-09T12:22:55.654352, end=2025-06-09T23:59:00, duration=30.0, tz=Asia/Kolkata
+2025-06-09 11:54:12,169 - [ERROR] - calendar_tools.py:75 - Unexpected error in check_availability: Authorized user info was not in the expected format, missing fields refresh_token, client_id, client_secret.
+2025-06-09 11:54:12,171 - [ERROR] - app.py:192 - An error occurred: ChatSession.send_message() got an unexpected keyword argument 'part'
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 169, in process_and_respond
+    second_response = st.session_state.chat_session.send_message(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ChatSession.send_message() got an unexpected keyword argument 'part'
+2025-06-09 12:02:36,486 - [INFO] - calendar_tools.py:42 - Tool 'check_availability' called with args: start=2025-06-09T18:30:00, end=2025-06-10T00:00:00, duration=30.0, tz=Asia/Kolkata
+2025-06-09 12:02:36,488 - [ERROR] - calendar_tools.py:75 - Unexpected error in check_availability: Authorized user info was not in the expected format, missing fields client_id, refresh_token, client_secret.
+2025-06-09 12:08:36,951 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:13:42,142 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:20:40,138 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:26:07,996 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:31:03,864 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:31:39,485 - [INFO] - calendar_tools.py:48 - Performing new user authentication.
+2025-06-09 12:31:46,529 - [INFO] - flow.py:476 - "GET /?state=5FEifs7dUKvbIUbygv1sM2qKoOiSy3&code=4/0AUJR-x5jX5xfIlq9y9vDORJIKCfqucJTOfk2Xg0SjbLZPhuZPv-Xp0oQs0iJPrhaqf0pGw&scope=https://www.googleapis.com/auth/calendar HTTP/1.1" 200 65
+2025-06-09 12:31:46,911 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:32:51,686 - [ERROR] - app.py:186 - An error occurred: Could not convert `part.function_call` to text.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 180, in process_and_respond
+    final_response = response.text
+                     ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\generation_types.py", line 536, in text
+    raise ValueError(f"Could not convert `part.{part_type}` to text.")
+ValueError: Could not convert `part.function_call` to text.
+2025-06-09 12:36:20,277 - [INFO] - calendar_tools.py:63 - Tool 'check_availability' called with args: start=2025-06-09T18:00:00, end=2025-06-09T18:30:00, duration=30.0, tz=Asia/Kolkata
+2025-06-09 12:36:20,363 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:36:26,149 - [ERROR] - calendar_tools.py:96 - Unexpected error in check_availability: Unable to find the server at www.googleapis.com
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\httplib2\__init__.py", line 1366, in _conn_request
+    conn.connect()
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\httplib2\__init__.py", line 1142, in connect
+    address_info = socket.getaddrinfo(host, port, 0, socket.SOCK_STREAM)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\calendar_tools.py", line 71, in check_availability
+    events_result = service.freebusy().query(body=body).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google_auth_httplib2.py", line 218, in request
+    response, content = self.http.request(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\httplib2\__init__.py", line 1373, in _conn_request
+    raise ServerNotFoundError("Unable to find the server at %s" % conn.host)
+httplib2.error.ServerNotFoundError: Unable to find the server at www.googleapis.com
+2025-06-09 12:44:12,608 - [INFO] - calendar_tools.py:63 - Tool 'check_availability' called with args: start=2025-06-09T14:59:00, end=2025-06-09T15:00:00, duration=30.0, tz=Asia/Kolkata
+2025-06-09 12:44:12,625 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:44:53,212 - [INFO] - calendar_tools.py:63 - Tool 'check_availability' called with args: start=2025-06-10T10:00:00, end=2025-06-10T12:00:00, duration=30.0, tz=Asia/Kolkata
+2025-06-09 12:44:53,218 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:45:16,126 - [INFO] - calendar_tools.py:102 - Tool 'create_calendar_event' called with args: start=2025-06-10T10:00:00+05:30, title=Interview AI interns
+2025-06-09 12:45:16,134 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:45:17,689 - [INFO] - calendar_tools.py:111 - Event created successfully. Event ID: 4lohkqmpfqi87fh18peel1l8ck
+2025-06-09 12:58:39,037 - [INFO] - calendar_tools.py:63 - Tool 'check_availability' called with args: start=2025-06-09T17:00:00+05:30, end=2025-06-09T23:59:59+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 12:58:39,048 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 12:58:39,052 - [ERROR] - calendar_tools.py:96 - Unexpected error in check_availability: Not naive datetime (tzinfo is already set)
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\calendar_tools.py", line 67, in check_availability
+    start_dt = tz.localize(datetime.datetime.fromisoformat(start_time.replace("Z", "")))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\pytz\tzinfo.py", line 321, in localize
+    raise ValueError('Not naive datetime (tzinfo is already set)')
+ValueError: Not naive datetime (tzinfo is already set)
+2025-06-09 13:00:38,284 - [ERROR] - app.py:192 - An error occurred: Could not convert `part.function_call` to text.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 186, in process_and_respond
+    final_response = response.text
+                     ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\generation_types.py", line 536, in text
+    raise ValueError(f"Could not convert `part.{part_type}` to text.")
+ValueError: Could not convert `part.function_call` to text.
+2025-06-09 13:02:39,093 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T17:00:00+05:30, end=2025-06-09T23:59:59+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 13:02:39,106 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:03:14,771 - [INFO] - calendar_tools.py:97 - Tool 'create_calendar_event' called with args: start=2025-06-09T17:00:00+05:30, title=Interviewing AI interns
+2025-06-09 13:03:14,778 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:03:16,206 - [INFO] - calendar_tools.py:106 - Event created successfully. Event ID: plsvtt6tbfjf2126mm46vfkujk
+2025-06-09 13:04:40,047 - [ERROR] - app.py:189 - An error occurred: Could not convert `part.function_call` to text.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 183, in process_and_respond
+    final_response = response.text
+                     ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\generation_types.py", line 536, in text
+    raise ValueError(f"Could not convert `part.{part_type}` to text.")
+ValueError: Could not convert `part.function_call` to text.
+2025-06-09 13:11:22,370 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T17:00:00+05:30, end=2025-06-09T17:30:00+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 13:11:22,381 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:11:45,443 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T17:00:00+05:30, end=2025-06-09T17:30:00+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 13:11:45,450 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:12:07,826 - [INFO] - calendar_tools.py:97 - Tool 'create_calendar_event' called with args: start=2025-06-09T17:00:00+05:30, title=Meeting with HQ
+2025-06-09 13:12:07,831 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:12:09,339 - [INFO] - calendar_tools.py:106 - Event created successfully. Event ID: 6dtt2gupsmovijhk6kqibrhd2g
+2025-06-09 13:19:23,726 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T13:18:40.580149+05:30, end=2025-06-09T16:18:40.580149+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 13:19:23,736 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:19:25,454 - [ERROR] - app.py:197 - An error occurred: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 181, in process_and_respond
+    response = st.session_state.chat_session.send_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+2025-06-09 13:23:51,295 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T16:22:51.675082+05:30, end=2025-06-09T19:22:51.675082+05:30, duration=25.0, tz=Asia/Kolkata
+2025-06-09 13:23:51,308 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:23:52,563 - [ERROR] - app.py:200 - An error occurred: Could not create `Blob`, expected `Blob`, `dict` or an `Image` type(`PIL.Image.Image` or `IPython.display.Image`).
+Got a: <class 'google.ai.generativelanguage_v1beta.types.content.Content'>
+Value: parts {
+  text: "schedule a meeting 3 hours ahead of now, duration 25 mins and titled AI interns work review and also give me brief about my schedule afterwards"
+}
+role: "user"
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 192, in process_and_respond
+    response = chat.send_message(chat.history)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 564, in send_message
+    content = content_types.to_content(content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\content_types.py", line 296, in to_content
+    return protos.Content(parts=[to_part(part) for part in content])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\content_types.py", line 296, in <listcomp>
+    return protos.Content(parts=[to_part(part) for part in content])
+                                 ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\content_types.py", line 264, in to_part
+    return protos.Part(inline_data=to_blob(part))
+                                   ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\content_types.py", line 210, in to_blob
+    raise TypeError(
+TypeError: Could not create `Blob`, expected `Blob`, `dict` or an `Image` type(`PIL.Image.Image` or `IPython.display.Image`).
+Got a: <class 'google.ai.generativelanguage_v1beta.types.content.Content'>
+Value: parts {
+  text: "schedule a meeting 3 hours ahead of now, duration 25 mins and titled AI interns work review and also give me brief about my schedule afterwards"
+}
+role: "user"
+
+2025-06-09 13:27:31,597 - [INFO] - calendar_tools.py:55 - Tool 'check_availability' called with args: start=2025-06-09T16:27:12.638861+05:30, end=2025-06-09T19:27:12.638861+05:30, duration=25.0, tz=Asia/Kolkata
+2025-06-09 13:27:31,608 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:27:34,280 - [ERROR] - app.py:195 - An error occurred: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 180, in process_and_respond
+    response = chat.send_message(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+2025-06-09 13:53:30,240 - [INFO] - calendar_tools.py:97 - Tool 'create_calendar_event' called with args: start=2025-06-09T16:53:27.767152+05:30, title=Interview of AI Engineer
+2025-06-09 13:53:30,245 - [INFO] - calendar_tools.py:34 - Credentials expired. Refreshing token...
+2025-06-09 13:53:30,601 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 13:53:35,225 - [INFO] - calendar_tools.py:106 - Event created successfully. Event ID: 39kmj6vi3ae3ne66ifngst6fds
+2025-06-09 13:57:15,044 - [ERROR] - app.py:206 - An error occurred: check_availability() missing 1 required positional argument: 'duration_minutes'
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 178, in process_and_respond
+    tool_result = check_availability(**args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_availability() missing 1 required positional argument: 'duration_minutes'
+2025-06-09 14:02:41,987 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:02:42,019 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:02:42,023 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:03:44,960 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:03:44,965 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:03:44,968 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:04:47,822 - [ERROR] - app.py:207 - An error occurred: Could not convert `part.function_call` to text.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 201, in process_and_respond
+    final_response = response.text
+                     ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\types\generation_types.py", line 536, in text
+    raise ValueError(f"Could not convert `part.{part_type}` to text.")
+ValueError: Could not convert `part.function_call` to text.
+2025-06-09 14:07:30,277 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:07:30,347 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:07:32,429 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:09:00,141 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:09:00,154 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:09:00,158 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:12:00,617 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:12:00,631 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:12:00,635 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:12:02,313 - [ERROR] - app.py:216 - An error occurred: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+Traceback (most recent call last):
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\app.py", line 200, in process_and_respond
+    response = chat.send_message(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 578, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\Agentic_AI_Meeting_Scheduler\smart_scheduler_v2\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Please ensure that the number of function response parts is equal to the number of function call parts of the function call turn.
+2025-06-09 14:12:18,737 - [INFO] - calendar_tools.py:124 - Tool 'get_day_schedule' called for day: today in timezone: Asia/Kolkata
+2025-06-09 14:12:18,743 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:12:18,747 - [INFO] - calendar_tools.py:138 - Checking schedule from 2025-06-09T00:00:00+05:30 to 2025-06-09T23:59:59.999999+05:30
+2025-06-09 14:12:29,467 - [INFO] - calendar_tools.py:56 - Tool 'check_availability' called with args: start=2025-06-09T17:00:00+05:30, end=2025-06-09T17:30:00+05:30, duration=30.0, tz=Asia/Kolkata
+2025-06-09 14:12:29,472 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:13:07,729 - [INFO] - calendar_tools.py:94 - Tool 'create_calendar_event' called with args: start=2025-06-10T17:00:00+05:30, title=Meeting with HQ
+2025-06-09 14:13:07,734 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:13:09,214 - [INFO] - calendar_tools.py:103 - Event created successfully. Event ID: fvsa5r8qc5kr7ai9ohqtts4mlg
+2025-06-09 14:21:52,052 - [INFO] - calendar_tools.py:80 - Tool 'get_day_schedule' called for day: today
+2025-06-09 14:21:52,065 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:25:23,990 - [INFO] - calendar_tools.py:80 - Tool 'get_day_schedule' called for day: today
+2025-06-09 14:25:23,993 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:26:06,963 - [INFO] - calendar_tools.py:121 - Tool 'manage_calendar_event' called with query: 'Interview of AI Engineer', action: 'delete'
+2025-06-09 14:26:06,964 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0
+2025-06-09 14:26:10,147 - [INFO] - calendar_tools.py:141 - Event 'Interview of AI Engineer' (ID: 39kmj6vi3ae3ne66ifngst6fds) deleted successfully.
+2025-06-09 14:26:24,573 - [INFO] - calendar_tools.py:68 - Tool 'create_calendar_event' called with args: start=2025-06-09T20:00:00+05:30, title=Meeting with authorities
+2025-06-09 14:26:24,578 - [INFO] - __init__.py:49 - file_cache is only supported with oauth2client<4.0.0

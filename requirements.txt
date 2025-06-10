@@ -1,0 +1,18 @@
+# requirements.txt
+
+# Core
+google-generativeai
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+python-dotenv
+pytz
+
+# Voice (Server-side transcription)
+SpeechRecognition
+PyAudio
+
+# Streamlit UI
+streamlit
+streamlit-mic-recorder
+streamlit-js-eval
